@@ -337,6 +337,7 @@ keypress(XKeyEvent *ev)
 		case XK_j: /* fallthrough */
 		case XK_J: /* fallthrough */
 		case XK_m: /* fallthrough */
+		case XK_v: ksym = XK_Next;  break;
 		case XK_M: ksym = XK_Return; ev->state &= ~ControlMask; break;
 		case XK_n: ksym = XK_Down;      break;
 		case XK_p: ksym = XK_Up;        break;
@@ -385,8 +386,7 @@ keypress(XKeyEvent *ev)
 		case XK_g: ksym = XK_Home;  break;
 		case XK_G: ksym = XK_End;   break;
 		case XK_h: ksym = XK_Up;    break;
-		case XK_j: ksym = XK_Next;  break;
-		case XK_k: ksym = XK_Prior; break;
+		case XK_v: ksym = XK_Prior; break;
 		case XK_l: ksym = XK_Down;  break;
 		default:
 			return;
